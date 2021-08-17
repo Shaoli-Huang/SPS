@@ -1,0 +1,20 @@
+
+exp_name: sps-two-branch
+dataset: cub
+train_proc: comm
+test_proc: comm
+
+midlevel: True
+prams_group: ['ftlayer','freshlayer']
+lr_group: [0.001,0.01]
+lrstep: [40,70]
+lrgamma: 0.1
+detach_epoch: 60
+epochs: 160
+numswap: 3
+sp: [[0.35,0.55],[0.35,0.55]]
+
+
+criterion: CrossEntropyLoss
+reduction: none
+warp: True
